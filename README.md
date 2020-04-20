@@ -11,5 +11,5 @@ vim-notes provides a single command, to open the day's notes.
 
 Set the directory using the `notes_dir` variable:
 
-        let g:notes_dir = $HOME . "/some/other/directory"
+    let g:notes_dir = $HOME . "/some/other/directory"
 
