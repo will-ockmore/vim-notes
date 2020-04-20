@@ -1,0 +1,34 @@
+*notes.txt* a notes workflow within vim
+
+
+  _   _       _
+ | \ | | ___ | |_ ___  ___
+ |  \| |/ _ \| __/ _ \/ __|
+ | |\  | (_) | ||  __/\__ \
+ |_| \_|\___/ \__\___||___/
+
+
+
+==============================================================================
+CONTENTS                                                      *NotesContents*
+
+  1. Introduction ............ |NotesIntroduction|
+  2. Commands ................ |NotesConfiguration|
+
+==============================================================================
+INTRODUCTION                                              *NotesIntroduction*
+
+A simple workflow for managing your notes from within Vim.
+
+Each day's notes will be available in `$HOME/.notes` as a markdown file.
+
+==============================================================================
+CONFIGURATION                                            *NotesConfiguration*
+
+vim-notes provides a single command, to open the day's notes.
+
+    nnoremap <leader>ne :Notes<CR>
+
+Set the directory using the `notes_dir` variable:
+
+    let g:notes_dir = $HOME . "/some/other/directory"
