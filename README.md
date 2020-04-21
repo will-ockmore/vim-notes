@@ -1,7 +1,7 @@
 # vim-notes
 A simple workflow for managing your daily notes from Vim.
 
-Each day's notes will be available in `$HOME/.notes` as a markdown file.
+Each day's notes will be available in `$HOME/notes` as a markdown file.
 
 ## Configuration
 

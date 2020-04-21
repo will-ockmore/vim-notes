@@ -20,7 +20,7 @@ INTRODUCTION                                              *NotesIntroduction*
 
 A simple workflow for managing your notes from within Vim.
 
-Each day's notes will be available in `$HOME/.notes` as a markdown file.
+Each day's notes will be available in `$HOME/notes` as a markdown file.
 
 ==============================================================================
 CONFIGURATION                                            *NotesConfiguration*

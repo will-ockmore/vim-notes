@@ -21,7 +21,7 @@
 " OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 " WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-let g:notes_dir = $HOME . "/.notes"
+let g:notes_dir = $HOME . "/notes"
 
 function! Trim(string)
   return substitute(a:string, '\n\+$', '', '')
