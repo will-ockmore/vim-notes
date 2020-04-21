@@ -5,7 +5,9 @@ Each day's notes will be available in `$HOME/notes` as a markdown file.
 
 ## Configuration
 
-vim-notes provides a single command, to open the day's notes.
+vim-notes provides a single command, `:Notes`, to open the day's notes.
+
+Add a mapping in your configuration:
 
     nnoremap <leader>ne :Notes<CR>
 
