@@ -21,6 +21,9 @@
 " OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 " WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 let g:notes_dir = $HOME . "/notes"
 
 function! s:Trim(string)
@@ -36,3 +39,6 @@ function! s:NotesEntry()
 endfunction
 
 command! Notes call s:NotesEntry()<CR>
+
+let &cpo = s:save_cpo 
+unlet s:save_cpo
