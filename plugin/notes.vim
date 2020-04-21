@@ -23,16 +23,16 @@
 
 let g:notes_dir = $HOME . "/notes"
 
-function! Trim(string)
+function! s:Trim(string)
   return substitute(a:string, '\n\+$', '', '')
 endfunction
 
-function! NotesEntry()
+function! s:NotesEntry()
   if !isdirectory(g:notes_dir)
       call mkdir(g:notes_dir, "p")
   endif
 
-  execute "edit " . g:notes_dir . "/" . Trim(system('date +"%d-%m-%Y"')) . ".md"
+  execute "edit " . g:notes_dir . "/" . s:Trim(system('date +"%d-%m-%Y"')) . ".md"
 endfunction
 
-command! -nargs=? Notes call NotesEntry()<CR>
+command! Notes call s:NotesEntry()<CR>
