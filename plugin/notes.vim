@@ -24,7 +24,7 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-let g:notes_dir = $HOME . "/notes"
+let g:notes_dir = get(g:, 'notes_dir', $HOME . "/notes")
 
 function! s:Trim(string)
   return substitute(a:string, '\n\+$', '', '')
