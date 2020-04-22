@@ -15,3 +15,8 @@ Set the directory using the `notes_dir` variable:
 
     let g:notes_dir = $HOME . "/some/other/directory"
 
+Set the date format for the names of the files using the `vim_notes_date_format` variable:
+
+    let g:vim_notes_date_format = "%d-%m-%Y-%A"
+
+The format should be the accepted by the `strftime()` function.

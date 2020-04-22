@@ -25,16 +25,17 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 let g:notes_dir = get(g:, 'notes_dir', $HOME . "/notes")
+let g:vim_notes_date_format = get(g:, 'vim_notes_date_format', "%d-%m-%Y")
 
 function! s:NotesEntry()
   if !isdirectory(g:notes_dir)
       call mkdir(g:notes_dir, "p")
   endif
 
-  execute "edit " . g:notes_dir . "/" . strftime("%d-%m-%Y") . ".md"
+  execute "edit " . g:notes_dir . "/" . strftime(g:vim_notes_date_format) . ".md"
 endfunction
 
-command! Notes call s:NotesEntry()<CR>
+command! Notes call s:NotesEntry()
 
-let &cpo = s:save_cpo 
+let &cpo = s:save_cpo
 unlet s:save_cpo
