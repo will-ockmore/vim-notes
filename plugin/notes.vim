@@ -26,16 +26,12 @@ set cpo&vim
 
 let g:notes_dir = get(g:, 'notes_dir', $HOME . "/notes")
 
-function! s:Trim(string)
-  return substitute(a:string, '\n\+$', '', '')
-endfunction
-
 function! s:NotesEntry()
   if !isdirectory(g:notes_dir)
       call mkdir(g:notes_dir, "p")
   endif
 
-  execute "edit " . g:notes_dir . "/" . s:Trim(system('date +"%d-%m-%Y"')) . ".md"
+  execute "edit " . g:notes_dir . "/" . strftime("%d-%m-%Y") . ".md"
 endfunction
 
 command! Notes call s:NotesEntry()<CR>
